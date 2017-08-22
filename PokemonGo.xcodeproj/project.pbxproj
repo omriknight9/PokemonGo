@@ -15,6 +15,9 @@
 		5A3593401F4C330000BC2240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A35933E1F4C330000BC2240 /* LaunchScreen.storyboard */; };
 		5A35934B1F4C330100BC2240 /* PokemonGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A35934A1F4C330100BC2240 /* PokemonGoTests.swift */; };
 		5A3593561F4C330100BC2240 /* PokemonGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3593551F4C330100BC2240 /* PokemonGoUITests.swift */; };
+		5A3593651F4C341D00BC2240 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3593641F4C341D00BC2240 /* MapKit.framework */; };
+		5A3593671F4C6DEF00BC2240 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3593661F4C6DEF00BC2240 /* PokedexViewController.swift */; };
+		5A3593691F4C6F0100BC2240 /* CoreDataHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3593681F4C6F0100BC2240 /* CoreDataHelp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		5A3593511F4C330100BC2240 /* PokemonGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3593551F4C330100BC2240 /* PokemonGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonGoUITests.swift; sourceTree = "<group>"; };
 		5A3593571F4C330100BC2240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A3593641F4C341D00BC2240 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5A3593661F4C6DEF00BC2240 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
+		5A3593681F4C6F0100BC2240 /* CoreDataHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A3593651F4C341D00BC2240 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,7 @@
 				5A3593491F4C330100BC2240 /* PokemonGoTests */,
 				5A3593541F4C330100BC2240 /* PokemonGoUITests */,
 				5A3593301F4C330000BC2240 /* Products */,
+				5A3593631F4C341C00BC2240 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +109,8 @@
 			children = (
 				5A3593321F4C330000BC2240 /* AppDelegate.swift */,
 				5A3593341F4C330000BC2240 /* ViewController.swift */,
+				5A3593661F4C6DEF00BC2240 /* PokedexViewController.swift */,
+				5A3593681F4C6F0100BC2240 /* CoreDataHelp.swift */,
 				5A3593361F4C330000BC2240 /* Main.storyboard */,
 				5A35933C1F4C330000BC2240 /* Assets.xcassets */,
 				5A35933E1F4C330000BC2240 /* LaunchScreen.storyboard */,
@@ -126,6 +136,14 @@
 				5A3593571F4C330100BC2240 /* Info.plist */,
 			);
 			path = PokemonGoUITests;
+			sourceTree = "<group>";
+		};
+		5A3593631F4C341C00BC2240 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A3593641F4C341D00BC2240 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A3593351F4C330000BC2240 /* ViewController.swift in Sources */,
+				5A3593691F4C6F0100BC2240 /* CoreDataHelp.swift in Sources */,
+				5A3593671F4C6DEF00BC2240 /* PokedexViewController.swift in Sources */,
 				5A3593331F4C330000BC2240 /* AppDelegate.swift in Sources */,
 				5A35933B1F4C330000BC2240 /* PokemonGo.xcdatamodeld in Sources */,
 			);
