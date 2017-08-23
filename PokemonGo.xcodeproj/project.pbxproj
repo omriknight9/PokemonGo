@@ -18,6 +18,7 @@
 		5A3593651F4C341D00BC2240 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3593641F4C341D00BC2240 /* MapKit.framework */; };
 		5A3593671F4C6DEF00BC2240 /* PokedexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3593661F4C6DEF00BC2240 /* PokedexViewController.swift */; };
 		5A3593691F4C6F0100BC2240 /* CoreDataHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3593681F4C6F0100BC2240 /* CoreDataHelp.swift */; };
+		5A48F4FC1F4D706A00FC0124 /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A48F4FB1F4D706A00FC0124 /* PokeAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		5A3593641F4C341D00BC2240 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5A3593661F4C6DEF00BC2240 /* PokedexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedexViewController.swift; sourceTree = "<group>"; };
 		5A3593681F4C6F0100BC2240 /* CoreDataHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelp.swift; sourceTree = "<group>"; };
+		5A48F4FB1F4D706A00FC0124 /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				5A3593341F4C330000BC2240 /* ViewController.swift */,
 				5A3593661F4C6DEF00BC2240 /* PokedexViewController.swift */,
 				5A3593681F4C6F0100BC2240 /* CoreDataHelp.swift */,
+				5A48F4FB1F4D706A00FC0124 /* PokeAnnotation.swift */,
 				5A3593361F4C330000BC2240 /* Main.storyboard */,
 				5A35933C1F4C330000BC2240 /* Assets.xcassets */,
 				5A35933E1F4C330000BC2240 /* LaunchScreen.storyboard */,
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A3593351F4C330000BC2240 /* ViewController.swift in Sources */,
+				5A48F4FC1F4D706A00FC0124 /* PokeAnnotation.swift in Sources */,
 				5A3593691F4C6F0100BC2240 /* CoreDataHelp.swift in Sources */,
 				5A3593671F4C6DEF00BC2240 /* PokedexViewController.swift in Sources */,
 				5A3593331F4C330000BC2240 /* AppDelegate.swift in Sources */,
@@ -540,6 +544,7 @@
 				5A35935C1F4C330100BC2240 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A35935D1F4C330100BC2240 /* Build configuration list for PBXNativeTarget "PokemonGoTests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +553,7 @@
 				5A35935F1F4C330100BC2240 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5A3593601F4C330100BC2240 /* Build configuration list for PBXNativeTarget "PokemonGoUITests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +562,7 @@
 				5A3593621F4C330100BC2240 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
