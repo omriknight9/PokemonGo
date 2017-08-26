@@ -26,6 +26,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDeleg
         manager.delegate = self
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+        
+        setup()
+        
+        }else {
+            manager.requestWhenInUseAuthorization()
+        }
+    
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            setup()
+        }
+    }
+    
+    func setup() {
+        
             mapView.delegate = self
             mapView.showsUserLocation = true
             manager.startUpdatingLocation()
@@ -39,18 +56,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDeleg
                     
                     let randoLat = (Double(arc4random_uniform(200)) - 100.0) / 50000.0
                     let randoLon = (Double(arc4random_uniform(200)) - 100.0) / 50000.0
-                
+                    
                     anno.coordinate.latitude += randoLat
                     anno.coordinate.longitude += randoLon
                     self.mapView.addAnnotation(anno)
                 }
-
+                
             })
-        
-        }else {
-            manager.requestWhenInUseAuthorization()
-        }
-    
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -102,15 +114,35 @@ class ViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDeleg
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { (timer) in
             if let coord = self.manager.location?.coordinate {
+                
+                let pokemon = (view.annotation as! PokeAnnotation).pokemon
+                
                 if MKMapRectContainsPoint(mapView.visibleMapRect, MKMapPointForCoordinate(coord)) {
-                    print("Can catch the pokemon")
                     
-                    let pokemon = (view.annotation as! PokeAnnotation).pokemon
                     pokemon.caught = true
                     (UIApplication.shared.delegate as! AppDelegate).saveContext()
                     
+                    mapView.removeAnnotation(view.annotation!)
+                    
+                    let alertVC = UIAlertController(title: "Congrats", message: "\(pokemon.name!) was caught!", preferredStyle: .alert)
+                    
+                    let pokedexAction = UIAlertAction(title: "Pokedex", style: .default, handler: { (action) in
+                        self.performSegue(withIdentifier: "pokedexSegue", sender: nil)
+                    })
+                    
+                    alertVC.addAction(pokedexAction)
+                    
+                    let OKaction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    
+                    alertVC.addAction(OKaction)
+                    self.present(alertVC, animated: true, completion: nil)
+                    
                 }else {
-                    print("Pokemon is far")
+                    let alertVC = UIAlertController(title: "Uh-Oh", message: "\(pokemon.name!) is to far away. Move closer to it", preferredStyle: .alert)
+                    let OKaction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    
+                    alertVC.addAction(OKaction)
+                    self.present(alertVC, animated: true, completion: nil)
                 }
             }
         }
